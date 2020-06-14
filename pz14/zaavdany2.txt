@@ -1,0 +1,34 @@
+//Числа искать с 5
+#include <iostream>
+#include <string>
+#include <ctime>
+#include <cstdlib>
+#include <iomanip>
+using namespace std;
+
+void see (int Array[],int len)
+{
+   for(int i=0;i<len;i++)
+   {
+       if(Array[i]>0)
+        cout<<Array[i]<<endl;
+       }
+    
+}
+
+int main()
+{
+    int n;
+    int Size;
+    cout<<"size ";
+    cin>>Size;
+    cout<<"num ";
+    cin>>n;
+    int Arr[Size];
+    srand(time(NULL));
+    for (int i=0; i<Size; i++){
+        Arr[i]=-70*rand()+100;
+        cout<<Arr[i]<<endl;}
+    cout<<endl;
+    see(Arr, Size);
+}

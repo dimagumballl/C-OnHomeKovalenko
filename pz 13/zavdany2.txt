@@ -1,0 +1,29 @@
+// тоже что и первое но масив двомерный
+#include <iostream>
+#include <string>
+#include <ctime>
+#include <cstdlib>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+int Size; 
+    cout << "Enter integer value: ";
+    cin >> Size; 
+
+    int **Araay = new int*[Size];
+    for(int i=0; i<2; i++)
+        Araay[i]=new int[Size];
+    
+    srand(time(NULL));
+    for (int i = 0; i < Size; i++) {
+        for (int j = 0; j < Size; j++) 
+            {
+                Araay[i][j] = rand()%8;
+                cout << "Value of [" << i<< "][" <<j << "] element is " << Araay[i][j] << endl;
+            }
+        
+    }
+    delete [] Araay; 
+}

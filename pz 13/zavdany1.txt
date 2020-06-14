@@ -1,0 +1,22 @@
+// Одномерный динамичный масив с рандомным заполнением
+#include <iostream>
+#include <string>
+#include <ctime>
+#include <cstdlib>
+using namespace std;
+
+int main()
+{
+int Size; 
+    cout << "Enter integer value: ";
+    cin >> Size; 
+
+    int *Araay = new int[Size]; 
+    srand(time(NULL));
+    for (int i = 0; i < Size; i++) {
+        
+        Araay[i] = rand()%Size;
+        cout << "Value of " << i << " element is " << Araay[i] << endl;
+    }
+    delete [] Araay; 
+}

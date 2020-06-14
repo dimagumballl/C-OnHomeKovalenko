@@ -1,0 +1,35 @@
+//Числа искать с 5
+#include <iostream>
+#include <string>
+#include <ctime>
+#include <cstdlib>
+#include <iomanip>
+using namespace std;
+
+void see (int x,int y)
+{
+   for(int i=0;i<x;i++)
+   {
+        cout<<"*";
+       }
+       cout<<endl;
+    for(int i=0;i<y;i++)
+   {
+        cout<<"*";
+        for(int i=2;i<x;i++)
+            {
+                cout<<" ";
+            }
+        cout<<"*";
+        cout<<endl;
+       }
+    for(int i=0;i<x;i++)
+   {
+        cout<<"*";
+       }
+}
+
+int main()
+{
+    see(40,5);
+}
