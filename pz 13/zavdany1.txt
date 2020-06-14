@@ -15,7 +15,24 @@ int Size;
     srand(time(NULL));
     for (int i = 0; i < Size; i++) {
         
-        Araay[i] = rand()%Size;
+        Araay[i] = rand()%100;
+        cout << "Value of " << i << " element is " << Araay[i] << endl;
+    }
+    cout<<endl;
+    int temp; 
+    
+    for (int i = 0; i < Size - 1; i++) {
+        for (int j = 0; j < Size - i - 1; j++) {
+            if (Araay[j] < Araay[j + 1]) {
+                temp = Araay[j];
+                Araay[j] = Araay[j + 1];
+                Araay[j + 1] = temp;
+            }
+        }
+    }
+    
+    for (int i = 0; i < Size; i++) {
+        
         cout << "Value of " << i << " element is " << Araay[i] << endl;
     }
     delete [] Araay; 
