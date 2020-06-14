@@ -6,30 +6,50 @@
 #include <iomanip>
 using namespace std;
 
-void see (int x,int y)
+void see (int x,int y,int z)
 {
+    for(int j=0; j<z;j++){
+        cout<<endl;
    for(int i=0;i<x;i++)
    {
         cout<<"*";
        }
+    }
        cout<<endl;
     for(int i=0;i<y;i++)
    {
+       for(int q=0; q<z;q++)
         cout<<"*";
-        for(int i=2;i<x;i++)
+        for(int i=2;i<x-z;i++)
             {
                 cout<<" ";
             }
+        for(int q=0; q<z;q++)    
         cout<<"*";
         cout<<endl;
        }
-    for(int i=0;i<x;i++)
+    for(int j=0; j<z;j++){
+        cout<<endl;
+   for(int i=0;i<x;i++)
    {
         cout<<"*";
        }
+    }
 }
 
 int main()
 {
-    see(40,5);
+    int x;
+    int y;
+    int z;
+    cout<<"enter x"<<endl;
+    cin>>x;
+    cout<<endl;
+    cout<<"enter y"<<endl;
+    cin>>y;
+    cout<<endl;
+    cout<<"enter z"<<endl;
+    cin>>z;
+    cout<<endl;
+    see(x,y,z);
 }

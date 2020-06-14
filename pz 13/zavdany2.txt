@@ -12,16 +12,45 @@ int Size;
     cout << "Enter integer value: ";
     cin >> Size; 
 
-    int **Araay = new int*[Size];
+    double **Araay = new double*[Size];
     for(int i=0; i<2; i++)
-        Araay[i]=new int[Size];
+        Araay[i]=new double[Size];
     
     srand(time(NULL));
     for (int i = 0; i < Size; i++) {
         for (int j = 0; j < Size; j++) 
             {
-                Araay[i][j] = rand()%8;
+                double a=(-1+rand()%3);
+                double c=(rand()%11);
+                Araay[i][j] = a/c;
                 cout << "Value of [" << i<< "][" <<j << "] element is " << Araay[i][j] << endl;
+            }
+        
+    }
+    cout<<endl;
+    double ser=0;
+    cout<<ser;
+    for (int i = 0; i < Size; i++) {
+        for (int j = 0; j < Size; j++) 
+            {
+                ser=ser+Araay[i][j];
+            }
+        
+    }
+    for (int i = 0; i < Size; i++) {
+        for (int j = 0; j < Size; j++) 
+            {
+                if(Araay[i][j]<0.5)
+                    Araay[i][j]=ser;
+                    cout << "Value of [" << i<< "][" <<j << "] element is " << Araay[i][j] << endl;
+            }
+        
+    }
+    for (int i = 0; i < Size; i++) {
+        for (int j = 0; j < Size; j++) 
+            {
+
+                    cout << "Value of [" << i<< "][" <<j << "] element is " << Araay[i][j] << endl;
             }
         
     }
